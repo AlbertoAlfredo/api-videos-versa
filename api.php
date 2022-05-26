@@ -5,12 +5,12 @@ echo "This is a warning error";
 ?>
 <?php
 include "conexao.php";
-
+header('Content-Type: application/json; charset=utf-8');
 $sql = '"SELECT * FROM `videos`"';
 
 $result = $con->query($sql);
 
 $data = $result;
-header('Content-Type: application/json; charset=utf-8');
+
 echo json_encode($data);
 ?>
