@@ -1,3 +1,4 @@
+Teste
 <?php
 include "conexao.php";
 
@@ -11,3 +12,4 @@ $result = $conn->query($sql);
 $data = $result;
 header('Content-Type: application/json; charset=utf-8');
 echo json_encode($data);
+?>
