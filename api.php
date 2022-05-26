@@ -5,7 +5,7 @@ ini_set('display_errors', '1');
 echo "This is a warning error";
 ?>
 <?php
-// include "conexao.php";
+include "conexao.php";
 
 echo "teste";
 
