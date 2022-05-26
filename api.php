@@ -5,7 +5,7 @@ Teste
 
 echo "teste";
 
-$sql = "SELECT * FROM videos";
+$sql = "'SELECT * FROM videos'";
 
 $result = $conn->query($sql);
 
