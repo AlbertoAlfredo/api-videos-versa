@@ -7,7 +7,7 @@ echo "This is a warning error";
 // header('Content-Type: application/json; charset=utf-8');
 include "conexao.php";
 
-$sql = "SELECT nome FROM videos";
+$sql = "SELECT * FROM videos";
 
 $result = mysqli_query($con, $sql);
 $data = $result->fetch_all(MYSQLI_ASSOC);
