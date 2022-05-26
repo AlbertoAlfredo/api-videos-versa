@@ -9,7 +9,8 @@ include "conexao.php";
 
 $sql = "SELECT nome FROM videos";
 
-$data = mysqli_query($con, $sql);
+$result = mysqli_query($con, $sql);
+$data = $result->fetch_all(MYSQLI_ASSOC);
 
 echo json_encode($data);
 ?>
