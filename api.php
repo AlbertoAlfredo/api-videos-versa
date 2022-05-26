@@ -1,6 +1,6 @@
 Teste
 <?php
-include "conexao.php";
+// include "conexao.php";
 
 echo "teste";
 
