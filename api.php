@@ -1,6 +1,8 @@
 <?php
 include "conexao.php";
 
+echo "teste";
+
 $sql = "SELECT * FROM videos";
 
 $result = $conn->query($sql);
