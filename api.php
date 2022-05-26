@@ -1,5 +1,10 @@
 Teste
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+echo "This is a warning error";
+?>
+<?php
 // include "conexao.php";
 
 echo "teste";
