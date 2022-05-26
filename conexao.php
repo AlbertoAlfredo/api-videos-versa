@@ -1,6 +1,6 @@
 <?php
 include "config.php";
-
+echo "conexao";
 
 $servidor = $SERVIDOR;
 $usuario = $USUARIO;
