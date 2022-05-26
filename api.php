@@ -6,8 +6,6 @@ echo "This is a warning error";
 <?php
 include "conexao.php";
 
-echo "teste";
-
 $sql = '"SELECT * FROM `videos`"';
 
 $result = $con->query($sql);
