@@ -11,7 +11,7 @@ echo "teste";
 
 $sql = "'SELECT * FROM `videos`'";
 
-$result = $conn->query($sql);
+$result = $con->query($sql);
 
 echo $result;
 
