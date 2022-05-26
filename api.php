@@ -4,7 +4,7 @@ ini_set('display_errors', '1');
 echo "This is a warning error";
 ?>
 <?php
-header('Content-Type: application/json; charset=utf-8');
+// header('Content-Type: application/json; charset=utf-8');
 include "conexao.php";
 
 $sql = '"SELECT * FROM `videos`"';
