@@ -9,7 +9,7 @@ $sql = "'SELECT * FROM videos'";
 
 $result = $conn->query($sql);
 
-var_dump($result);
+echo $result;
 
 $data = $result;
 header('Content-Type: application/json; charset=utf-8');
