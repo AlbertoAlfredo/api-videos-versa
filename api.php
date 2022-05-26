@@ -11,5 +11,5 @@ $sql = "SELECT * FROM videos";
 
 $data = mysqli_query($con, $sql);
 
-echo json_decode($data, true);
+var_dump(json_decode($data));
 ?>
