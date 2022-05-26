@@ -11,5 +11,5 @@ $sql = '"SELECT * FROM `videos`"';
 
 $data = $con->query($sql);
 
-echo json_encode($data);
+echo $data;
 ?>
