@@ -9,9 +9,7 @@ include "conexao.php";
 
 $sql = '"SELECT * FROM `videos`"';
 
-$result = $con->query($sql);
-
-$data = $result;
+$data = $con->query($sql);
 
 echo json_encode($data);
 ?>
