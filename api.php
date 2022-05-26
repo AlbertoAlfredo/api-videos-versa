@@ -11,5 +11,5 @@ $sql = "SELECT * FROM videos";
 $result = mysqli_query($con, $sql);
 $data = $result->fetch_all(MYSQLI_ASSOC);
 
-echo json_encode($data);
+echo json_encode($data, JSON_UNESCAPED_UNICODE);
 ?>
