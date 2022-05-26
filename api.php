@@ -1,5 +1,5 @@
-# php 7.*
 <?php
+# php 7.*
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 echo "This is a warning error";
@@ -9,11 +9,9 @@ include "conexao.php";
 
 echo "teste";
 
-$sql = "'SELECT * FROM `videos`'";
+$sql = '"SELECT * FROM `videos`"';
 
 $result = $con->query($sql);
-
-echo $result;
 
 $data = $result;
 header('Content-Type: application/json; charset=utf-8');
