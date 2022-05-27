@@ -36,7 +36,7 @@ function addVideos($nome, $url){
     $data = mysqli_query($con, $sql);
 
 
-    print $data;
+    print json_encode($data, JSON_UNESCAPED_UNICODE);
 
 };
 
