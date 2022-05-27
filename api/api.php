@@ -43,9 +43,11 @@ function addVideos($nome, $url){
 function editVideo($id, $nome, $url){
     $sql = "UPDATE videos SET nome = $nome, url = $url WHERE id = $id";
     $con = conexao();
+    mysqli_query($con, $sql);
+    $sql = "SELECT id, nome, url FROM videos WHERE id = $id"; 
     $result = mysqli_query($con, $sql);
     $data = $result->fetch_all(MYSQLI_ASSOC);
-
+    
     print json_encode($data, JSON_UNESCAPED_UNICODE);
 
 };
