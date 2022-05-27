@@ -29,10 +29,10 @@ function addVideos($nome, $url){
     $sql = "INSERT INTO videos (nome, url) VALUES ($nome, $url)";
     $con = conexao();
     $result = mysqli_query($con, $sql);
-    print "Video adicionado $result";
+    print "Video adicionado $result ";
 
     //Mostrando o último registro do banco de dados e assim mostrando o vídeo que você adicionou
-    $sql = "SELECT TOP 1 id, nome, url FROM videos ORDER BY ID DESC";
+    $sql = "SELECT TOP 1 * FROM videos ORDER BY ID DESC";
     $data = mysqli_query($con, $sql);
 
 
