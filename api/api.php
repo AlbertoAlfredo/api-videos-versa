@@ -21,7 +21,7 @@ function getVideo($id = "", $nome = ""){
     $con = conexao();
     $result = mysqli_query($con, $sql);
     $data = $result->fetch_all(MYSQLI_ASSOC);
-
+    print $result;
     print json_encode($data, JSON_UNESCAPED_UNICODE);
 }
 
