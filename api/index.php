@@ -4,11 +4,10 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 ?>
 <?php
-
-$video = filter_input(INPUT_GET, 'video');
-$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
-$nome = filter_input(INPUT_GET, 'nome');
-$url = filter_input(INPUT_GET, 'url');
+$video = ( isset($_GET['video']) ) ? $_GET['video'] : null;;
+$id = ( isset($_GET['id']) ) ? $_GET['id'] : null;;
+$nome = ( isset($_GET['nome']) ) ? $_GET['nome'] : null;;
+$url = ( isset($_GET['url']) ) ? $_GET['url'] : null;;
 $parametros = "video: $video, id: $id, nome:  $nome, url: $url";
 
 if($video == "post") {
