@@ -21,6 +21,12 @@ elseif($video == "put") {
 elseif($video == "delete") {
     deleteVideo($id);
     print $parametros;
+}elseif($video == "get"){
+    if( $id || $nome){
+        getVideo($id, $nome);
+    }else{
+        getVideos();
+    }
 }
 else {
     getVideos();
