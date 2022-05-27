@@ -21,7 +21,7 @@ function addVideos($nome, $url){
     $result = mysqli_query($con, $sql);
     $data = $result->fetch_all(MYSQLI_ASSOC);
 
-    print json_encode($data, JSON_UNESCAPED_UNICODE);
+    print "Video adicionado";
 
 };
 
@@ -31,7 +31,7 @@ function editVideo($id, $nome, $url){
     $result = mysqli_query($con, $sql);
     $data = $result->fetch_all(MYSQLI_ASSOC);
 
-    print json_encode($data, JSON_UNESCAPED_UNICODE);
+    print "Video Editado";
 };
 
 function deleteVideo($id){
@@ -40,7 +40,7 @@ function deleteVideo($id){
     $result = mysqli_query($con, $sql);
     $data = $result->fetch_all(MYSQLI_ASSOC);
 
-    print json_encode($data, JSON_UNESCAPED_UNICODE);
+    print "Video Apagado";
 };
 
 ?>
