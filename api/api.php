@@ -19,7 +19,7 @@ function getVideo($id = "", $nome = ""){
     if($id != ""){
         $sql = "SELECT id, nome, url FROM videos WHERE id = $id";
     } elseif($nome != ""){
-        $sql = "SELECT id, nome, url FROM videos WHERE nome = $nome";
+        $sql = "SELECT id, nome, url FROM videos WHERE nome = '$nome'";
     }
     
     $con = conexao();
