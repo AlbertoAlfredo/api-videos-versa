@@ -15,9 +15,8 @@ function getVideos(){
     print json_encode($data, JSON_UNESCAPED_UNICODE);
 };
 
-function getVideo($id = "", $nome = ""){
-    $sql = "SELECT id, nome, url FROM videos WHERE id = $id OR nome = $nome"; 
-    
+function getVideo($id){
+    $sql = "SELECT id, nome, url FROM videos WHERE id = $id"; 
     $con = conexao();
     $result = mysqli_query($con, $sql);
     print $result;
@@ -30,9 +29,14 @@ function addVideos($nome, $url){
     $sql = "INSERT INTO videos (nome, url) VALUES ($nome, $url)";
     $con = conexao();
     $result = mysqli_query($con, $sql);
-    getVideo("", $nome);
-
     print "Video adicionado $result";
+
+    //Mostrando o último registro do banco de dados e assim mostrando o vídeo que você adicionou
+    $sql = "SELECT TOP 1 * FROM videos ORDER BY ID DESC";
+    $result = mysqli_query($con, $sql);
+    $data = $result->fetch_all(MYSQLI_ASSOC);
+
+    print json_encode($data, JSON_UNESCAPED_UNICODE);
 
 };
 
