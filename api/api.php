@@ -31,7 +31,8 @@ function addVideos($nome, $url){
     mysqli_query($con, $sql);
 
     //Mostrando o último registro do banco de dados e assim mostrando o vídeo que você adicionou
-    $sql = "SELECT TOP 1 * FROM videos ORDER BY id DESC";
+    
+    $sql = "SELECT * FROM Video ORDER BY id DESC LIMIT 1";
     $data = mysqli_query($con, $sql);
 
 
