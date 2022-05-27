@@ -5,7 +5,7 @@ ini_set('display_errors', '1');
 ?>
 <?php
 
-$video = filter_input(INPUT_GET, 'api');;
+$video = filter_input(INPUT_GET, 'video');;
 $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 $nome = filter_input(INPUT_GET, 'nome');
 $url = filter_input(INPUT_GET, 'url', FILTER_VALIDATE_URL);
