@@ -53,7 +53,7 @@ function editVideo($id, $nome, $url){
 };
 
 function deleteVideo($id){
-    $sql = "DELETE FROM Videos WHERE id = $id";
+    $sql = "DELETE FROM videos WHERE id = $id";
     $con = conexao();
     mysqli_query($con, $sql);
 
