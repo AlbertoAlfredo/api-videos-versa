@@ -19,7 +19,7 @@ function getVideo($id){
     $sql = "SELECT id, nome, url FROM videos WHERE id = $id"; 
     $con = conexao();
     $result = mysqli_query($con, $sql);
-    print $result;
+
     $data = $result->fetch_all(MYSQLI_ASSOC);
     
     print json_encode($data, JSON_UNESCAPED_UNICODE);
@@ -32,7 +32,7 @@ function addVideos($nome, $url){
     print "Video adicionado $result";
 
     //Mostrando o último registro do banco de dados e assim mostrando o vídeo que você adicionou
-    $sql = "SELECT TOP 1 * FROM videos ORDER BY ID DESC";
+    $sql = "SELECT TOP 1 id, nome, url FROM videos ORDER BY ID DESC";
     $result = mysqli_query($con, $sql);
     $data = $result->fetch_all(MYSQLI_ASSOC);
 
