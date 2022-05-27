@@ -10,7 +10,7 @@ $nome = ( isset($_GET['nome']) ) ? $_GET['nome'] : null;
 $url = ( isset($_GET['url']) ) ? $_GET['url'] : null;
 $parametros = "video: $video, id: $id, nome:  $nome, url: $url";
 
-if("$video" == "post") {
+if($video == "post") {
     addVideos($nome, $url);
     print $parametros;
 }
