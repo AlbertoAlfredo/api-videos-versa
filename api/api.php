@@ -16,7 +16,7 @@ function getVideos(){
 };
 
 function getVideo($id = "", $nome = ""){
-    $sql = "SELECT id, nome, url FROM videos WHERE id = $id, nome = $nome"; 
+    $sql = "SELECT id, nome, url FROM videos WHERE id = $id OR nome = $nome"; 
     
     $con = conexao();
     $result = mysqli_query($con, $sql);
