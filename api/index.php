@@ -12,7 +12,6 @@ $parametros = "video: $video, id: $id, nome:  $nome, url: $url";
 
 if($video == "post") {
     addVideos($nome, $url);
-    print $parametros;
 }
 elseif($video == "put") {
     editVideo($id, $nome, $url);
