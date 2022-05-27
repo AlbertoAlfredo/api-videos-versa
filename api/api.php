@@ -44,9 +44,10 @@ function editVideo($id, $nome, $url){
     $sql = "UPDATE videos SET nome = $nome, url = $url WHERE id = $id";
     $con = conexao();
     $result = mysqli_query($con, $sql);
-    
+    $data = $result->fetch_all(MYSQLI_ASSOC);
 
-    print "Video Editado $result";
+    print json_encode($data, JSON_UNESCAPED_UNICODE);
+
 };
 
 function deleteVideo($id){
