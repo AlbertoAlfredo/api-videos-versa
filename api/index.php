@@ -8,7 +8,7 @@ ini_set('display_errors', '1');
 $video = filter_input(INPUT_GET, 'video');
 $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 $nome = filter_input(INPUT_GET, 'nome');
-$url = filter_input(INPUT_GET, 'url', FILTER_VALIDATE_URL);
+$url = filter_input(INPUT_GET, 'url');
 $parametros = "video: $video, id: $id, nome:  $nome, url: $url";
 switch ($video) {
     case "post":
