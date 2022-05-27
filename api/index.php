@@ -15,11 +15,11 @@ if($video == "post") {
 }
 elseif($video == "put") {
     editVideo($id, $nome, $url);
-    print $parametros;
+
 }
 elseif($video == "delete") {
     deleteVideo($id);
-    print $parametros;
+
 }elseif($video == "get"){
     if($id){
         getVideo($id, $nome);
@@ -29,7 +29,7 @@ elseif($video == "delete") {
 }
 else {
     getVideos();
-    print $parametros;
+
 }
 
 
