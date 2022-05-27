@@ -55,9 +55,9 @@ function editVideo($id, $nome, $url){
 function deleteVideo($id){
     $sql = "DELETE FROM Videos WHERE id = $id";
     $con = conexao();
-    $result = mysqli_query($con, $sql);
+    mysqli_query($con, $sql);
 
-    print "Video Apagado $result";
+    print "Video Apagado";
 };
 
 ?>
