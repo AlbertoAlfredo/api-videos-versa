@@ -19,7 +19,6 @@ function addVideos($nome, $url){
     $sql = "INSERT INTO videos (nome, url) VALUES ($nome, $url)";
     $con = conexao();
     $result = mysqli_query($con, $sql);
-    $data = $result->fetch_all(MYSQLI_ASSOC);
 
     print "Video adicionado";
 
